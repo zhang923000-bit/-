@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yuefa Vietnam Hair Co., Ltd. — Source Factory · Premium Human Hair Products</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231A3A2A'/><text y='.72em' x='.12em' font-size='62' fill='%23C9A961' font-family='serif'>Y</text></svg>">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap">
+<style>
+:root {
+  --ivory: #F5F1EA;
+  --ivory-dark: #EBE4D8;
+  --green: #1A3A2A;
+  --green-light: #2D5A3D;
+  --gold: #C9A961;
+  --gold-light: #DCC089;
+  --dark: #1C1C1C;
+  --gray: #6B6B6B;
+  --white: #FFFFFF;
+  --serif: 'Cormorant Garamond', 'Noto Serif SC', 'Georgia', serif;
+  --sans: 'Noto Sans SC', 'Helvetica Neue', 'Arial', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--ivory); color: var(--dark); line-height: 1.7; font-weight: 300; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
+
+/* ===== Announcement ===== */
+.announcement { background: var(--green); color: var(--ivory); text-align: center; padding: 10px 20px; font-size: 12px; letter-spacing: 2px; font-weight: 400; }
+.announcement span { color: var(--gold); margin: 0 8px; }
+
+/* ===== Navigation ===== */
+.nav { background: rgba(245,241,234,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(26,58,42,0.08); position: sticky; top: 0; z-index: 100; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; max-width: 1320px; margin: 0 auto; }
+.nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.nav-logo-mark { width: 40px; height: 40px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-family: var(--serif); font-size: 22px; font-weight: 600; }
+.nav-logo-text { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--green); letter-spacing: 1px; line-height: 1.1; }
+.nav-logo-text small { display: block; font-family: var(--sans); font-size: 9px; letter-spacing: 3px; color: var(--gray); font-weight: 400; text-transform: uppercase; }
+.nav-menu { display: flex; gap: 32px; list-style: none; }
+.nav-menu a { font-size: 13px; letter-spacing: 1px; font-weight: 400; color: var(--dark); transition: color 0.3s; position: relative; }
+.nav-menu a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+.nav-menu a:hover { color: var(--gold); }
+.nav-menu a:hover::after { width: 100%; }
+.nav-icons { display: flex; gap: 20px; align-items: center; }
+.nav-icons svg { width: 20px; height: 20px; cursor: pointer; transition: opacity 0.3s; color: var(--green); }
+.nav-icons svg:hover { opacity: 0.6; }
+.cart-badge { position: relative; }
+.cart-count { position: absolute; top: -6px; right: -8px; background: var(--gold); color: var(--green); font-size: 10px; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+
+/* ===== Hero ===== */
+.hero { position: relative; height: 90vh; min-height: 640px; overflow: hidden; display: flex; align-items: center; }
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(105deg, rgba(26,58,42,0.82) 0%, rgba(26,58,42,0.5) 45%, transparent 100%); }
+.hero-content { position: relative; z-index: 2; max-width: 1320px; margin: 0 auto; padding: 0 40px; width: 100%; }
+.hero-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; font-weight: 500; }
+.hero-tag::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+.hero h1 { font-family: var(--serif); font-size: clamp(40px, 5.5vw, 72px); font-weight: 400; line-height: 1.1; color: var(--ivory); margin-bottom: 24px; max-width: 640px; }
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero p { font-size: 16px; color: rgba(245,241,234,0.8); max-width: 480px; margin-bottom: 40px; line-height: 1.9; font-weight: 300; }
+.hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 16px 38px; font-size: 13px; letter-spacing: 2px; font-weight: 500; cursor: pointer; transition: all 0.35s; border: none; font-family: var(--sans); }
+.btn-gold { background: var(--gold); color: var(--green); }
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline-light { background: transparent; color: var(--ivory); border: 1px solid rgba(245,241,234,0.5); }
+.btn-outline-light:hover { background: var(--ivory); color: var(--green); border-color: var(--ivory); }
+.btn-outline-dark { background: transparent; color: var(--green); border: 1px solid var(--green); }
+.btn-outline-dark:hover { background: var(--green); color: var(--ivory); }
+
+/* ===== Stats Bar ===== */
+.stats-bar { background: var(--green); padding: 48px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 1320px; margin: 0 auto; padding: 0 40px; }
+.stat-item { text-align: center; color: var(--ivory); border-right: 1px solid rgba(245,241,234,0.12); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-family: var(--serif); font-size: 42px; font-weight: 600; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.stat-label { font-size: 13px; letter-spacing: 1px; opacity: 0.8; font-weight: 300; }
+
+/* ===== Common Block ===== */
+.section { padding: 100px 0; }
+.section-header { text-align: center; margin-bottom: 64px; }
+.section-tag { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; font-weight: 500; }
+.section-title { font-family: var(--serif); font-size: clamp(30px, 3.8vw, 46px); font-weight: 400; color: var(--green); margin-bottom: 16px; line-height: 1.2; }
+.section-subtitle { font-size: 15px; color: var(--gray); max-width: 560px; margin: 0 auto; font-weight: 300; line-height: 1.9; }
+
+/* ===== Products ===== */
+.collections { background: var(--ivory); }
+.prod-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.prod-card { background: #FBF8F2; overflow: hidden; transition: box-shadow 0.3s; display: flex; flex-direction: column; }
+.prod-card:hover { box-shadow: 0 8px 32px rgba(26,58,42,0.12); }
+.prod-card-img { position: relative; aspect-ratio: 3/4; overflow: hidden; background: var(--ivory-dark); }
+.prod-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.prod-card:hover .prod-card-img img { transform: scale(1.04); }
+.prod-badge { position: absolute; top: 14px; left: 14px; background: var(--gold); color: var(--green); font-size: 11px; letter-spacing: 1px; padding: 5px 14px; font-weight: 600; border-radius: 2px; }
+.prod-card-body { padding: 26px 28px 30px; flex: 1; display: flex; flex-direction: column; }
+.prod-name { font-family: var(--serif); font-size: 22px; font-weight: 700; color: var(--dark); margin-bottom: 10px; line-height: 1.3; }
+.prod-desc { font-size: 13.5px; color: var(--gray); line-height: 1.7; margin-bottom: 18px; }
+.prod-specs { font-size: 12.5px; color: var(--gray); line-height: 2; margin-bottom: 16px; padding-top: 16px; border-top: 1px solid rgba(26,58,42,0.08); }
+.prod-specs .spec-label { color: var(--dark); font-weight: 500; }
+.prod-detail-link { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 16px; display: inline-flex; align-items: center; gap: 4px; transition: color 0.2s; }
+.prod-detail-link:hover { color: var(--green); }
+.prod-wa-btn { display: flex; align-items: center; justify-content: center; gap: 8px; padding: 13px; background: #25D366; color: #fff; border: none; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.3s; font-family: var(--sans); margin-top: auto; border-radius: 4px; }
+.prod-wa-btn:hover { background: #1fb857; }
+
+/* ===== Quality Grade ===== */
+.tiers { background: var(--white); }
+.tier-scroll { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; scrollbar-width: thin; }
+.tier-card { flex: 0 0 240px; background: var(--ivory); border: 1px solid rgba(26,58,42,0.08); padding: 32px 24px; transition: all 0.35s; position: relative; }
+.tier-card:hover { border-color: var(--gold); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(26,58,42,0.1); }
+.tier-card.featured { background: var(--green); color: var(--ivory); }
+.tier-card.featured .tier-name { color: var(--gold); }
+.tier-badge { position: absolute; top: -1px; right: 20px; background: var(--gold); color: var(--green); font-size: 10px; letter-spacing: 1px; padding: 4px 10px; font-weight: 500; }
+.tier-name { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--green); margin-bottom: 6px; }
+.tier-desc { font-size: 12px; color: var(--gray); margin-bottom: 16px; line-height: 1.7; font-weight: 300; }
+.tier-card.featured .tier-desc { color: rgba(245,241,234,0.7); }
+.tier-price { font-size: 13px; color: var(--gold); font-weight: 500; margin-bottom: 4px; }
+.tier-size { font-size: 11px; color: var(--gray); }
+.tier-card.featured .tier-size { color: rgba(245,241,234,0.6); }
+
+/* ===== Our Factory ===== */
+.factory { background: var(--ivory); }
+.factory-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.factory-images { position: relative; }
+.factory-img-main { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+.factory-img-sub { position: absolute; bottom: -30px; right: -30px; width: 55%; aspect-ratio: 1; object-fit: cover; border: 8px solid var(--ivory); }
+.factory-content .section-tag { text-align: left; }
+.factory-content h2 { font-family: var(--serif); font-size: clamp(28px, 3.2vw, 40px); font-weight: 400; color: var(--green); margin-bottom: 24px; line-height: 1.25; }
+.factory-content p { font-size: 15px; color: var(--gray); line-height: 1.9; margin-bottom: 20px; font-weight: 300; }
+.factory-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 32px 0; }
+.factory-feature { display: flex; gap: 12px; align-items: flex-start; }
+.factory-feature svg { width: 22px; height: 22px; color: var(--gold); flex-shrink: 0; margin-top: 2px; }
+.factory-feature h4 { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 2px; }
+.factory-feature p { font-size: 12px; color: var(--gray); margin: 0; line-height: 1.6; }
+
+/* ===== Process ===== */
+.process { background: var(--green); color: var(--ivory); }
+.process .section-title { color: var(--ivory); }
+.process .section-subtitle { color: rgba(245,241,234,0.7); }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+.process-step { text-align: center; padding: 0 20px; position: relative; }
+.process-step:not(:last-child)::after { content: ''; position: absolute; top: 32px; right: -10px; width: 20px; height: 1px; background: var(--gold); opacity: 0.5; }
+.process-num { width: 64px; height: 64px; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-family: var(--serif); font-size: 24px; color: var(--gold); }
+.process-step h3 { font-family: var(--serif); font-size: 20px; font-weight: 500; margin-bottom: 10px; color: var(--ivory); }
+.process-step p { font-size: 13px; color: rgba(245,241,234,0.7); line-height: 1.8; font-weight: 300; }
+
+/* ===== Price Reference ===== */
+.pricing { background: var(--white); }
+.price-table-wrap { overflow-x: auto; border: 1px solid rgba(26,58,42,0.1); }
+.price-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 700px; }
+.price-table th { background: var(--green); color: var(--ivory); padding: 16px 20px; text-align: center; font-weight: 500; font-size: 13px; letter-spacing: 1px; }
+.price-table td { padding: 14px 20px; text-align: center; border-bottom: 1px solid rgba(26,58,42,0.06); }
+.price-table tr:nth-child(even) { background: var(--ivory); }
+.price-table .tier-label { text-align: left; font-weight: 500; color: var(--green); }
+.price-table .tier-label small { display: block; font-weight: 300; color: var(--gray); font-size: 11px; margin-top: 2px; }
+.price-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 20px; }
+.price-note strong { color: var(--gold); }
+
+/* ===== Advantages ===== */
+.advantages { background: var(--ivory); }
+.adv-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.adv-card { background: var(--white); padding: 36px 28px; text-align: center; border-top: 3px solid var(--gold); transition: transform 0.3s; }
+.adv-card:hover { transform: translateY(-4px); }
+.adv-icon { width: 56px; height: 56px; background: var(--ivory); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
+.adv-icon svg { width: 26px; height: 26px; color: var(--gold); }
+.adv-card h3 { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--green); margin-bottom: 10px; }
+.adv-card p { font-size: 13px; color: var(--gray); line-height: 1.8; font-weight: 300; }
+
+/* ===== Reviews ===== */
+.reviews { background: var(--white); }
+.review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.review-card { background: var(--ivory); padding: 36px 30px; position: relative; }
+.review-card::before { content: '"'; font-family: var(--serif); font-size: 72px; color: var(--gold); opacity: 0.25; position: absolute; top: 8px; left: 24px; line-height: 1; }
+.review-stars { color: var(--gold); font-size: 14px; letter-spacing: 3px; margin-bottom: 18px; }
+.review-text { font-size: 14px; line-height: 1.9; color: var(--gray); margin-bottom: 24px; font-weight: 300; font-style: italic; }
+.review-author { display: flex; align-items: center; gap: 14px; }
+.review-avatar { width: 44px; height: 44px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 18px; color: var(--gold); font-weight: 500; }
+.review-author-info h4 { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 2px; }
+.review-author-info p { font-size: 12px; color: var(--gray); }
+
+/* ===== Wholesale Process ===== */
+.wholesale { background: var(--ivory-dark); }
+.wholesale-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+.ws-step { text-align: center; padding: 0 12px; position: relative; }
+.ws-step-num { font-family: var(--serif); font-size: 48px; font-weight: 600; color: var(--gold); opacity: 0.3; line-height: 1; margin-bottom: 12px; }
+.ws-step h3 { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 8px; }
+.ws-step p { font-size: 12px; color: var(--gray); line-height: 1.7; font-weight: 300; }
+.ws-cta { text-align: center; margin-top: 56px; padding-top: 40px; border-top: 1px solid rgba(201,169,97,0.25); }
+.ws-cta-lines { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; }
+.ws-cta-lines::before, .ws-cta-lines::after { content: ''; width: 60px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+.ws-cta-diamond { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+.ws-cta-label { font-family: var(--serif); font-size: 16px; color: var(--green); letter-spacing: 3px; text-transform: uppercase; }
+.ws-cta-btn { display: inline-flex; align-items: center; gap: 10px; padding: 16px 44px; background: #25D366; color: #fff; font-size: 15px; font-weight: 500; border-radius: 3px; transition: all 0.3s; letter-spacing: 0.5px; }
+.ws-cta-btn:hover { background: #1fb857; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,0.3); }
+.ws-cta-btn svg { width: 20px; height: 20px; }
+.ws-cta-note { margin-top: 16px; font-size: 12px; color: var(--gray); font-weight: 300; letter-spacing: 0.5px; }
+
+/* ===== FAQ ===== */
+.faq { background: var(--white); }
+.faq-list { max-width: 800px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid rgba(26,58,42,0.1); }
+.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; cursor: pointer; font-size: 15px; font-weight: 500; color: var(--green); transition: color 0.3s; }
+.faq-q:hover { color: var(--gold); }
+.faq-q svg { width: 20px; height: 20px; color: var(--gold); transition: transform 0.3s; flex-shrink: 0; }
+.faq-item.open .faq-q svg { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; font-size: 14px; color: var(--gray); line-height: 1.9; font-weight: 300; }
+.faq-item.open .faq-a { max-height: 300px; padding-bottom: 22px; }
+
+
+/* ===== FAQ ===== */
+.faq { background: var(--white); }
+.faq-wrap { max-width: 860px; margin: 0 auto; }
+.faq-item { border-bottom: 1px solid rgba(26,58,42,0.1); }
+.faq-item:first-child { border-top: 1px solid rgba(26,58,42,0.1); }
+.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 26px 0; cursor: pointer; font-size: 16px; font-weight: 500; color: var(--green); transition: color 0.3s; font-family: var(--serif); }
+.faq-q:hover { color: var(--gold); }
+.faq-icon { width: 28px; height: 28px; border: 1px solid rgba(26,58,42,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-left: 20px; transition: all 0.3s; }
+.faq-icon::before { content: '+'; font-size: 18px; color: var(--gold); line-height: 1; font-weight: 300; }
+.faq-item.open .faq-icon { background: var(--green); border-color: var(--green); }
+.faq-item.open .faq-icon::before { content: '\2212'; color: var(--ivory); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.3s ease; font-size: 14.5px; color: var(--gray); line-height: 2; font-weight: 300; }
+.faq-item.open .faq-a { max-height: 500px; padding-bottom: 26px; }
+
+
+/* ===== Color Chart ===== */
+.colors-showcase { background: var(--ivory-dark); padding: 100px 0; }
+.colors-showcase .section-tag { color: var(--gold); }
+.colors-showcase .section-title { color: var(--green); }
+.colors-showcase .section-subtitle { color: var(--gray); }
+.colors-frame { background: var(--white); border: 1px solid rgba(26,58,42,0.08); padding: 56px 48px; box-shadow: 0 4px 24px rgba(26,58,42,0.06); }
+.colors-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.color-panel-label { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 24px; }
+.color-panel-label h4 { font-family: var(--serif); font-size: 18px; font-weight: 600; color: var(--green); letter-spacing: 2px; white-space: nowrap; }
+.color-panel-line { flex: 1; height: 1px; background: var(--gold); opacity: 0.4; }
+.color-img { width: 100%; height: 420px; object-fit: cover; border-radius: 2px; display: block; border: 1px solid rgba(26,58,42,0.06); }
+.colors-footer { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 44px; padding-top: 28px; border-top: 1px solid rgba(26,58,42,0.08); }
+.colors-footer p { font-size: 13px; color: var(--gray); letter-spacing: 1px; font-weight: 300; }
+.colors-dot { width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+
+/* ===== CTA ===== */
+.cta-banner { position: relative; padding: 100px 0; overflow: hidden; display: flex; align-items: center; }
+.cta-banner img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.cta-banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(10,25,18,0.93) 0%, rgba(15,40,28,0.88) 50%, rgba(10,25,18,0.93) 100%); z-index: 1; }
+.cta-content { position: relative; z-index: 2; max-width: 1320px; margin: 0 auto; padding: 0 40px; text-align: center; color: var(--ivory); width: 100%; }
+.cta-content h2 { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 44px); font-weight: 400; margin-bottom: 16px; }
+.cta-content p { font-size: 15px; opacity: 0.8; max-width: 520px; margin: 0 auto 32px; font-weight: 300; line-height: 1.8; }
+
+/* ===== Footer ===== */
+.footer { background: #0F2418; color: rgba(245,241,234,0.7); padding: 70px 0 30px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 50px; }
+.footer-brand .nav-logo-text { color: var(--ivory); margin-bottom: 16px; }
+.footer-brand p { font-size: 13px; line-height: 1.9; margin-bottom: 20px; font-weight: 300; }
+.footer-contact p { font-size: 13px; margin-bottom: 10px; display: flex; gap: 10px; align-items: flex-start; }
+.footer-contact svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+.footer-col h4 { font-size: 13px; letter-spacing: 2px; color: var(--ivory); margin-bottom: 20px; font-weight: 500; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { font-size: 13px; transition: color 0.3s; font-weight: 300; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(245,241,234,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; flex-wrap: wrap; gap: 12px; }
+
+/* ===== Toast ===== */
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--green); color: var(--ivory); padding: 14px 28px; font-size: 13px; z-index: 999; transition: transform 0.4s ease; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .prod-grid { grid-template-columns: 1fr 1fr; }
+  .factory-grid { grid-template-columns: 1fr; gap: 48px; }
+  .factory-img-sub { display: none; }
+  .process-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .process-step:not(:last-child)::after { display: none; }
+  .adv-grid { grid-template-columns: 1fr 1fr; }
+  .review-grid { grid-template-columns: 1fr; }
+  .wholesale-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .colors-grid { grid-template-columns: 1fr; gap: 40px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+  .stat-item:nth-child(2) { border-right: none; }
+}
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .nav-inner { padding: 14px 20px; }
+  .nav-menu { display: none; }
+  .hero { height: 80vh; min-height: 560px; }
+  .hero-content { padding: 0 20px; }
+  .section { padding: 64px 0; }
+  .prod-grid { grid-template-columns: 1fr; }
+  .adv-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
+  .wholesale-steps { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .stats-grid { grid-template-columns: 1fr 1fr; padding: 0 20px; }
+  .factory-features { grid-template-columns: 1fr; }
+  .colors-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; }
+  .hero-btns .btn { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- Announcement -->
+<div class="announcement">Vietnam Source Factory Direct<span>·</span>Worldwide Shipping<span>·</span>100% Human Hair</div>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">Y</div>
+      <div class="nav-logo-text">Yuefa<small>YUEFA VIETNAM HAIR</small></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#collections">Products</a></li>
+      <li><a href="#factory">Our Factory</a></li>
+      <li><a href="#wholesale">Wholesale</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-icons">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" onclick="showToast('Search demo')"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <img src="assets/hero.jpg" alt="Yuefa Vietnam Hair" class="hero-bg">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-tag">VIETNAM SOURCE FACTORY · SINCE 2009</div>
+    <h1>Sourced from Vietnam<em>Luxurious Hair</em><br>3rd-Gen Flat Weft Craft Heritage</h1>
+    <p>Yuefa Vietnam Hair Co., Ltd. — 15 years in the premium human hair industry. From sourcing to shipping, every bundle undergoes 36 strict quality checks, delivering source-factory quality to clients in 50+ countries.</p>
+    <div class="hero-btns">
+      <a href="#collections" class="btn btn-gold">Explore Products</a>
+      <a href="#wholesale" class="btn btn-outline-light">Wholesale Inquiry</a>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Bar -->
+<div class="stats-bar">
+  <div class="stats-grid">
+    <div class="stat-item"><div class="stat-num">15+</div><div class="stat-label">Years of Industry Expertise</div></div>
+    <div class="stat-item"><div class="stat-num">50+</div><div class="stat-label">Export Countries & Regions</div></div>
+    <div class="stat-item"><div class="stat-num">100K</div><div class="stat-label">Monthly Capacity（bundle）</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Premium Human Hair Sourcing</div></div>
+  </div>
+</div>
+
+<!-- Products -->
+<section class="section collections" id="collections">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Our Collection</div>
+      <h2 class="section-title">10 Professional Hair Extension Types</h2>
+      <p class="section-subtitle">100% human hair, 100g per bundle. Click for pricing & MOQ. Remy & Virgin grades available. Dark (#1-6) / Light (#7+). All textures: Straight, Curly, Wavy.</p>
+    </div>
+    <div class="prod-grid">
+
+      <!-- 1. Genius Weft -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-feather.jpg" alt="Genius Weft Hand-tied"><span class="prod-badge">Best Seller</span></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Genius Weft (Hand-Tied)</h3>
+          <p class="prod-desc">Ultra-thin hand-tied invisible weft. Lightweight & seamless. The #1 selling weft in salons worldwide.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Weight</span>: 50g/pc, 2 pcs = 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-genius-weft.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 2. Normal Tape -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-tape-normal.jpg" alt="Normal Tape Hair"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Normal Tape Hair</h3>
+          <p class="prod-desc">Classic PU tape-in extensions. Fast installation, secure & durable. Great value for high-traffic salons.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Per piece</span>: 2.5g, 40pcss/pcs = 100g</div>
+            <div><span class="spec-label">Tape width</span>: 4cm × 0.8cm</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-normal-tape.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 3. Injected Tape -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-tape-injected.jpg" alt="Injected Tape Hair"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Injected Tape Hair</h3>
+          <p class="prod-desc">Premium injected skin weft. Ultra-thin invisible hairline. The premium choice for invisible blending.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Weight</span>: 100g</div>
+            <div><span class="spec-label">Per piece</span>: 2.5g, 40pcss/pcs = 100g</div>
+            <div><span class="spec-label">Tape width</span>: 4cm × 0.8cm</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-injected-tape.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 4. I-Tip -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-itip.jpg" alt="I-Tip"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">I-Tip Hair</h3>
+          <p class="prod-desc">Micro bead extensions. No heat, no glue needed. Ideal for clients wanting damage-free, discreet installation.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Per piece</span>: 1g, 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-itip.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 5. Nano Hair -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-nano.jpg" alt="Nano Hair"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Nano Hair</h3>
+          <p class="prod-desc">The smallest tip on the market. Ultra-invisible, perfect for fine hair. Seamless blend for a natural look.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Per piece</span>: 1g, 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-nano.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 6. Micro Rings -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-micro-ring.jpg" alt="Micro Rings"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Micro Rings</h3>
+          <p class="prod-desc">Micro ring extensions with tiny metal rings. No heat, no glue. Gentle, reusable, no hair damage.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Per piece</span>: 1g, 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-micro-rings.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 7. U-Tip -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-utip.jpg" alt="Keratin Tip U-tip"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Keratin Tip (U-Tip)</h3>
+          <p class="prod-desc">Pre-tipped keratin bonds with fusion bonding. With proper care, lasts 3-4 months.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Per piece</span>: 1g, 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-utip.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 8. Flat Tip -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-flat-tip.jpg" alt="Flat Tip (Keratin Bonds)"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Flat Tip (Keratin Bonds)</h3>
+          <p class="prod-desc">Pre-bonded flat tip extensions. Stronger bond for thick hair and long-lasting wear.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Per piece</span>: 1g, 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-flat-tip.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 9. Machine Weft -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-bundle.jpg" alt="Machine Weft"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Machine Weft</h3>
+          <p class="prod-desc">Durable machine weft for sew-in applications. The most economical choice for high-traffic salons.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Weight</span>: 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-machine-weft.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+      <!-- 10. Hair Bulk -->
+      <div class="prod-card">
+        <div class="prod-card-img"><img src="assets/product-blonde.jpg" alt="Hair Bulk"></div>
+        <div class="prod-card-body">
+          <h3 class="prod-name">Hair Bulk</h3>
+          <p class="prod-desc">Unprocessed bulk hair for braiding, custom wefts, wig making, or any creative use.</p>
+          <div class="prod-specs">
+            <div><span class="spec-label">Weight</span>: 100g</div>
+            <div><span class="spec-label">Length</span>: 18" - 28"</div>
+            <div><span class="spec-label">Hair Grade</span>: Human Hair (Remy) / Virgin Hair (Virgin)</div>
+            <div><span class="spec-label">Color</span>: Dark #1-6 / Light #7+</div>
+            <div><span class="spec-label">MOQ</span>: 100g</div>
+          </div>
+          <a href="product-hair-bulk.html" class="prod-detail-link">View Pricing & MOQ ↗</a>
+          <a href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank" class="prod-wa-btn">WhatsApp →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Our Factory -->
+<section class="section factory" id="factory">
+  <div class="container">
+    <div class="factory-grid">
+      <div class="factory-images">
+        <img src="assets/factory.jpg" alt="Yuefa Production Floor" class="factory-img-main">
+        <img src="assets/factory-exterior.jpg" alt="Yuefa Factory Exterior" class="factory-img-sub">
+      </div>
+      <div class="factory-content">
+        <div class="section-tag">Our Factory</div>
+        <h2>Vietnam Source Factory<br>Quality & Capacity Assurance</h2>
+        <p>Our factory is located in Vietnam, With 5,000 sqm modern production facility, over 200 experienced craftspeople.From raw material sourcing to sorting, hand-weaving, and quality control — fully in-house, ensuring every bundle meets the highest standards.</p>
+        <p>As a source factory, we cut out the middleman. Stable supply at competitive wholesale prices on premium human hair products.</p>
+        <div class="factory-features">
+          <div class="factory-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/></svg>
+            <div><h4>Quality Certified</h4><p>ISO & CE certified ISO EU-compliant CE certifications</p></div>
+          </div>
+          <div class="factory-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="m16 8 4 2v3h-4"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <div><h4>Worldwide Logistics</h4><p>DHL/FedEx 48hour shipping</p></div>
+          </div>
+          <div class="factory-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div><h4>Expert Team</h4><p>200+ Average craftsman experience 8 years</p></div>
+          </div>
+          <div class="factory-feature">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/></svg>
+            <div><h4>Custom Services</h4><p>Custom color/length/density available</p></div>
+          </div>
+        </div>
+        <a href="#wholesale" class="btn btn-outline-dark">Learn About Wholesale</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Color Chart -->
+<section class="section colors-showcase" id="colors">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Color Palette</div>
+      <h2 class="section-title">24 Standard Colors</h2>
+      <p class="section-subtitle">From natural dark brown to refined platinum, every shade calibrated by professional colorists. Custom color matching available for your brand.</p>
+    </div>
+    <div class="colors-frame">
+      <div style="text-align:center;margin-bottom:32px;display:flex;align-items:center;justify-content:center;gap:20px;">
+        <span style="display:inline-block;width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--gold));"></span>
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);transform:rotate(45deg);"></span>
+        <h4 style="font-family:var(--serif);font-size:22px;color:var(--green);letter-spacing:3px;font-weight:500;">Color Shades</h4>
+        <span style="display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--gold);transform:rotate(45deg);"></span>
+        <span style="display:inline-block;width:60px;height:1px;background:linear-gradient(90deg,var(--gold),transparent);"></span>
+      </div>
+      <div class="colors-grid">
+        <div class="color-panel">
+          <img src="assets/color-dark.jpg" alt="Color Chart" class="color-img">
+        </div>
+        <div class="color-panel">
+          <img src="assets/color-light.jpg" alt="Color Chart" class="color-img">
+        </div>
+      </div>
+      <div class="colors-footer">
+        <span class="colors-dot"></span>
+        <p>Standard 24 stock colors · Custom colors: contact us · 7 day sample turnaround</p>
+        <span class="colors-dot"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Advantages -->
+<section class="section advantages">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Why Choose Us</div>
+      <h2 class="section-title">Why Choose Yuefa</h2>
+    </div>
+    <div class="adv-grid">
+      <div class="adv-card">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/></svg></div>
+        <h3>Source Factory</h3>
+        <p>Vietnam-owned Factory, No middleman markup, More competitive wholesale pricing, Quality fully controlled.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <h3>Quality Guaranteed</h3>
+        <p>100% human hair. Triple QC system. Sample confirmation support. Returns accepted if unsatisfied.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="m16 8 4 2v3h-4"/></svg></div>
+        <h3>Fast Delivery</h3>
+        <p>Stock 48 hour shipping for stock, DHL/FedEx Worldwide Shipping, typically 3–5 business days delivery.</p>
+      </div>
+      <div class="adv-card">
+        <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2Z"/></svg></div>
+        <h3>Dedicated Service</h3>
+        <p>One-on-one account manager. OEM/ODM customization supported. End-to-end support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<!-- Wholesale Process -->
+<section class="section wholesale" id="wholesale">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Wholesale Process</div>
+      <h2 class="section-title">Start Your Wholesale Partnership in 5 Steps</h2>
+      <p class="section-subtitle">A simple and efficient process from inquiry to delivery. We support you every step of the way.</p>
+    </div>
+    <div class="wholesale-steps">
+      <div class="ws-step"><div class="ws-step-num">01</div><h3>Inquiry</h3><p>Contact our account manager, Tell us your needs, target market and budget</p></div>
+      <div class="ws-step"><div class="ws-step-num">02</div><h3>Selection & Quote</h3><p>We recommend grades and specs based on your needs, Provide a detailed quotation</p></div>
+      <div class="ws-step"><div class="ws-step-num">03</div><h3>Sample Confirmation</h3><p>Pay sample fee（(deductible from bulk order)）, Receive samples and confirm quality</p></div>
+      <div class="ws-step"><div class="ws-step-num">04</div><h3>Order & Production</h3><p>Confirm order and pay deposit, Stock ships within 48h, custom orders 7–15 days</p></div>
+      <div class="ws-step"><div class="ws-step-num">05</div><h3>Shipping & Delivery</h3><p>Ship after balance payment, DHL/FedEx full tracking</p></div>
+    </div>
+    <div class="ws-cta">
+      <div class="ws-cta-lines"><span class="ws-cta-diamond"></span><span class="ws-cta-label">Contact Us</span><span class="ws-cta-diamond"></span></div>
+      <a class="ws-cta-btn" href="https://api.whatsapp.com/message/UNO5GC27ZKAKN1?autoload=1&app_absent=0" target="_blank">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.228 1.36.196 1.871.119.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        WhatsApp Inquire Now
+      </a>
+      <div class="ws-cta-note">Your dedicated account manager will respond quickly  · Multi-language support</div>
+    </div>
+  </div>
+</section>
+
+<section class="section reviews">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Testimonials</div>
+      <h2 class="section-title">Trusted by Clients Worldwide</h2>
+      <p class="section-subtitle">Wholesalers and salon brands from around the world have built long-term partnerships with Yuefa.</p>
+    </div>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Partnered for 3 years, Yuefa's quality has been consistently stable.VIP 9 line is a bestseller in our salon, Clients love the hair quality, Looks very natural.Direct factory shipping, Prices are very competitive.</p>
+        <div class="review-author">
+          <div class="review-avatar">L</div>
+          <div class="review-author-info"><h4>Linh Nguyen</h4><p>USA · Salon Chain Owner</p></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Compared many factories, Yuefa's virgin hair quality truly stands out.Thick, bouncy strands, Maintains shine after bleaching.Fast customer service, Custom needs met, Very professional.</p>
+        <div class="review-author">
+          <div class="review-avatar">S</div>
+          <div class="review-author-info"><h4>Sarah Kim</h4><p>Korea · Hair Import Wholesaler</p></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">Bulk hair quality exceeded expectations, No short hairs or mixing, Full length and weight.We've used their hair for 2+ years, High client repeat rate.Fast shipping too, Great partnership.</p>
+        <div class="review-author">
+          <div class="review-avatar">M</div>
+          <div class="review-author-info"><h4>Maria Santos</h4><p>Brazil · Extension Studio Founder</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">FAQ</h2>
+      <p class="section-subtitle">Frequently asked questions about wholesale, product quality, and custom services.</p>
+    </div>
+    <div class="faq-wrap">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the MOQ?<span class="faq-icon"></span></div>
+        <div class="faq-a">The minimum order quantity is 100g per color for stock items. You may mix multiple colors in a single order.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How long is production?<span class="faq-icon"></span></div>
+        <div class="faq-a">Production time varies by product, typically 3–7 days. Worldwide shipping via DHL/FedEx takes 3–5 business days.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you support OEM/private label?<span class="faq-icon"></span></div>
+        <div class="faq-a">Absolutely. We provide custom packaging, branding, and labeling for your salon or distribution business. The MOQ for private label is 100g per SKU. Our simple 4-step process: (1) Send your logo and packaging requirements; (2) We create pre-production samples for your approval (3–5 days); (3) After your confirmation, we begin full production; (4) Final QC photos are sent before shipping. We handle everything from design files to barcode generation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is the hair 100% human hair?<span class="faq-icon"></span></div>
+        <div class="faq-a">Yes. All our hair is 100% human hair with intact cuticle alignment. No silicone coating and no synthetic fibers.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do you ensure consistent quality?<span class="faq-icon"></span></div>
+        <div class="faq-a">We follow a strict 7-step QC process: raw material inspection → sorting → structure check → wash verification → AQL 2.5 sampling → final touch test → packaging integrity check. Our defect rate stays below 1.5%. If you are not satisfied, we will rework or replace free of charge.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can you do custom colors?<span class="faq-icon"></span></div>
+        <div class="faq-a">Yes. Send photos or physical samples and our colorists will match the shade. Custom colors typically add 2–3 business days to production.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <img src="assets/cta-bg.jpg" alt="Yuefa Factory">
+  <div class="cta-content">
+    <div class="section-tag" style="color:var(--gold)">Get Started Today</div>
+    <h2>Ready to Start Your Wholesale Partnership?</h2>
+    <p>Contact our professional account manager for a custom quotation. Yuefa — where every strand becomes your competitive edge.</p>
+    <a href="#collections" class="btn btn-gold">Browse Products & Inquire</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo-text" style="font-size:20px;">Yuefa<small style="color:var(--gold)">YUEFA VIETNAM HAIR</small></div>
+        <p>Yuefa Vietnam Hair Co., Ltd. — 15 years of expertise in premium human hair. Source-factory quality and service for clients worldwide.</p>
+        <div class="footer-contact">
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> +86 17539539222</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> z17539539222@gmail.com</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg> Hanoi, Vietnam · Yuefa Industrial Park</p>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#collections">3rd-Gen Flat Weft</a></li>
+          <li><a href="#collections">Hair Bulk</a></li>
+          <li><a href="#collections">Extension Accessories</a></li>
+          <li><a href="#collections">All Products</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>About Us</h4>
+        <ul>
+          <li><a href="#factory">Our Factory</a></li>
+          <li><a href="#wholesale">Wholesale</a></li>
+      <li><a href="#faq">FAQ</a></li>
+            </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Yuefa Vietnam Hair Co., Ltd. YUEFA VIETNAM HAIR CO., LTD. All rights reserved.</p>
+      <p>Prices in：K VND（K = 1,000 VND）</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+function toggleFaq(el) {
+  const item = el.parentElement;
+  item.classList.toggle('open');
+}
+
+// Toggle by size buttons
+document.querySelectorAll('.prod-sizes').forEach(group => {
+  group.addEventListener('click', function(e) {
+    const btn = e.target.closest('.prod-size-btn');
+    if (btn) {
+      group.querySelectorAll('.prod-size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  });
+});
+
+// Nav scroll shadow
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 10 ? '0 2px 24px rgba(26,58,42,0.1)' : 'none';
+});
+</script>
+</body>
+</html>

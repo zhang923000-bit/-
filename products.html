@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Products — Yuefa Vietnam Hair Co., Ltd.</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231A3A2A'/><text y='.72em' x='.12em' font-size='62' fill='%23C9A961' font-family='serif'>Y</text></svg>">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap">
+<style>
+:root {
+  --ivory: #F5F1EA; --ivory-dark: #EBE4D8; --green: #1A3A2A; --green-light: #2D5A3D;
+  --gold: #C9A961; --gold-light: #DCC089; --dark: #1C1C1C; --gray: #6B6B6B; --white: #FFFFFF;
+  --serif: 'Cormorant Garamond', 'Noto Serif SC', 'Georgia', serif;
+  --sans: 'Noto Sans SC', 'Helvetica Neue', 'Arial', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); background: var(--ivory); color: var(--dark); line-height: 1.7; font-weight: 300; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+.container { max-width: 1320px; margin: 0 auto; padding: 0 40px; }
+
+/* Announcement */
+.announcement { background: var(--green); color: var(--ivory); text-align: center; padding: 10px 20px; font-size: 12px; letter-spacing: 2px; }
+.announcement span { color: var(--gold); margin: 0 8px; }
+
+/* Navigation */
+.nav { background: rgba(245,241,234,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(26,58,42,0.08); position: sticky; top: 0; z-index: 100; }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 40px; max-width: 1320px; margin: 0 auto; }
+.nav-logo { display: flex; align-items: center; gap: 12px; cursor: pointer; }
+.nav-logo-mark { width: 40px; height: 40px; background: var(--green); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: var(--gold); font-family: var(--serif); font-size: 22px; font-weight: 600; }
+.nav-logo-text { font-family: var(--serif); font-size: 22px; font-weight: 600; color: var(--green); letter-spacing: 1px; line-height: 1.1; }
+.nav-logo-text small { display: block; font-family: var(--sans); font-size: 9px; letter-spacing: 3px; color: var(--gray); font-weight: 400; text-transform: uppercase; }
+.nav-menu { display: flex; gap: 32px; list-style: none; }
+.nav-menu a { font-size: 13px; letter-spacing: 1px; font-weight: 400; color: var(--dark); transition: color 0.3s; position: relative; }
+.nav-menu a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+.nav-menu a:hover { color: var(--gold); }
+.nav-menu a:hover::after { width: 100%; }
+.nav-menu a.active { color: var(--gold); }
+.nav-menu a.active::after { width: 100%; }
+.nav-icons { display: flex; gap: 20px; align-items: center; }
+.nav-icons svg { width: 20px; height: 20px; cursor: pointer; transition: opacity 0.3s; color: var(--green); }
+.nav-icons svg:hover { opacity: 0.6; }
+.cart-badge { position: relative; cursor: pointer; }
+.cart-count { position: absolute; top: -6px; right: -8px; background: var(--gold); color: var(--green); font-size: 10px; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; }
+
+/* Page Header */
+.page-header { background: var(--green); color: var(--ivory); padding: 60px 0; text-align: center; }
+.breadcrumb { font-size: 12px; letter-spacing: 2px; color: var(--gold); margin-bottom: 16px; }
+.breadcrumb a { color: rgba(245,241,234,0.7); }
+.breadcrumb a:hover { color: var(--gold); }
+.page-header h1 { font-family: var(--serif); font-size: clamp(32px, 4vw, 48px); font-weight: 400; margin-bottom: 12px; }
+.page-header p { font-size: 15px; opacity: 0.7; max-width: 500px; margin: 0 auto; font-weight: 300; }
+
+/* Filter */
+.filter-bar { background: var(--white); border-bottom: 1px solid rgba(26,58,42,0.08); padding: 20px 0; position: sticky; top: 77px; z-index: 50; }
+.filter-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1320px; margin: 0 auto; padding: 0 40px; flex-wrap: wrap; gap: 16px; }
+.filter-tabs { display: flex; gap: 8px; }
+.filter-tab { padding: 10px 24px; font-size: 13px; letter-spacing: 1px; border: 1px solid rgba(26,58,42,0.15); background: transparent; color: var(--dark); cursor: pointer; transition: all 0.3s; font-family: var(--sans); font-weight: 400; }
+.filter-tab:hover { border-color: var(--gold); color: var(--gold); }
+.filter-tab.active { background: var(--green); color: var(--ivory); border-color: var(--green); }
+.filter-count { font-size: 13px; color: var(--gray); }
+
+/* Product Grid */
+.products-section { padding: 48px 0 80px; }
+.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.product-card { background: var(--white); border: 1px solid rgba(26,58,42,0.06); transition: all 0.35s; overflow: hidden; }
+.product-card:hover { box-shadow: 0 16px 48px rgba(26,58,42,0.12); transform: translateY(-4px); }
+.product-img { position: relative; aspect-ratio: 1; overflow: hidden; background: var(--ivory-dark); }
+.product-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
+.product-card:hover .product-img img { transform: scale(1.05); }
+.product-badge { position: absolute; top: 14px; left: 14px; background: var(--gold); color: var(--green); font-size: 10px; letter-spacing: 1.5px; padding: 5px 12px; font-weight: 500; }
+.product-badge.green { background: var(--green); color: var(--gold); }
+.product-info { padding: 24px; }
+.product-tier { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; font-weight: 500; }
+.product-name { font-family: var(--serif); font-size: 21px; font-weight: 500; color: var(--green); margin-bottom: 8px; line-height: 1.3; }
+.product-desc { font-size: 13px; color: var(--gray); margin-bottom: 16px; line-height: 1.7; font-weight: 300; min-height: 44px; }
+.product-price-range { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 16px; }
+.product-price-range small { font-size: 12px; color: var(--gray); font-weight: 300; margin-left: 6px; }
+.product-sizes { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+.size-btn { padding: 6px 14px; font-size: 12px; border: 1px solid rgba(26,58,42,0.15); background: transparent; color: var(--dark); cursor: pointer; transition: all 0.25s; font-family: var(--sans); }
+.size-btn:hover { border-color: var(--gold); }
+.size-btn.active { background: var(--green); color: var(--ivory); border-color: var(--green); }
+.size-btn.disabled { opacity: 0.3; cursor: not-allowed; text-decoration: line-through; }
+.product-bottom { display: flex; gap: 10px; align-items: center; }
+.qty-control { display: flex; align-items: center; border: 1px solid rgba(26,58,42,0.15); }
+.qty-control button { width: 32px; height: 36px; border: none; background: transparent; cursor: pointer; font-size: 16px; color: var(--green); transition: background 0.2s; }
+.qty-control button:hover { background: var(--ivory); }
+.qty-control input { width: 40px; height: 36px; border: none; text-align: center; font-size: 14px; font-family: var(--sans); background: transparent; outline: none; }
+.add-cart-btn { flex: 1; padding: 11px 16px; background: var(--green); color: var(--ivory); border: none; font-size: 12px; letter-spacing: 1.5px; cursor: pointer; transition: all 0.3s; font-family: var(--sans); font-weight: 500; }
+.add-cart-btn:hover { background: var(--gold); color: var(--green); }
+
+/* Price List */
+.full-pricing { background: var(--white); padding: 80px 0; border-top: 1px solid rgba(26,58,42,0.06); }
+.section-header { text-align: center; margin-bottom: 48px; }
+.section-tag { font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 500; }
+.section-title { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 40px); font-weight: 400; color: var(--green); margin-bottom: 12px; }
+.price-table-wrap { overflow-x: auto; border: 1px solid rgba(26,58,42,0.1); }
+.price-table { width: 100%; border-collapse: collapse; font-size: 14px; min-width: 700px; }
+.price-table th { background: var(--green); color: var(--ivory); padding: 14px 16px; text-align: center; font-weight: 500; font-size: 13px; }
+.price-table td { padding: 12px 16px; text-align: center; border-bottom: 1px solid rgba(26,58,42,0.06); }
+.price-table tr:nth-child(even) { background: var(--ivory); }
+.price-table .tier-label { text-align: left; font-weight: 500; color: var(--green); }
+.price-table .tier-label small { display: block; font-weight: 300; color: var(--gray); font-size: 11px; margin-top: 2px; }
+.price-note { text-align: center; font-size: 12px; color: var(--gray); margin-top: 20px; }
+.price-note strong { color: var(--gold); }
+
+/* Footer */
+.footer { background: #0F2418; color: rgba(245,241,234,0.7); padding: 60px 0 28px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand p { font-size: 13px; line-height: 1.9; margin-bottom: 16px; font-weight: 300; }
+.footer-contact p { font-size: 13px; margin-bottom: 8px; display: flex; gap: 10px; align-items: flex-start; }
+.footer-contact svg { width: 16px; height: 16px; color: var(--gold); flex-shrink: 0; margin-top: 3px; }
+.footer-col h4 { font-size: 13px; letter-spacing: 2px; color: var(--ivory); margin-bottom: 18px; font-weight: 500; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { font-size: 13px; transition: color 0.3s; font-weight: 300; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom { border-top: 1px solid rgba(245,241,234,0.1); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; flex-wrap: wrap; gap: 12px; }
+
+/* Toast */
+.toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--green); color: var(--ivory); padding: 14px 28px; font-size: 13px; z-index: 999; transition: transform 0.4s ease; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+.toast.show { transform: translateX(-50%) translateY(0); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .nav-inner { padding: 14px 20px; }
+  .nav-menu { display: none; }
+  .filter-inner { padding: 0 20px; }
+  .product-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .filter-tabs { flex-wrap: wrap; }
+}
+</style>
+</head>
+<body>
+
+<div class="announcement">Vietnam Source Factory Direct<span>·</span>Worldwide Shipping<span>·</span>100% Human Hair</div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">Y</div>
+      <div class="nav-logo-text">Yuefa<small>YUEFA VIETNAM HAIR</small></div>
+    </a>
+    <ul class="nav-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="index.html#factory">Our Factory</a></li>
+      <li><a href="index.html#wholesale">Wholesale</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-icons">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" onclick="showToast('Search demo')"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="breadcrumb"><a href="index.html">Home</a> / Products</div>
+  <h1>All Products</h1>
+  <p>3rd-Gen Flat Weft, Hair Bulk, Professional Accessories, Source Factorydirect supply, Quality you can trust</p>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-inner">
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-cat="all">All Products</button>
+      <button class="filter-tab" data-cat="feather">3rd-Gen Flat Weft</button>
+      <button class="filter-tab" data-cat="bundle">Raw Bulk · bundle</button>
+      <button class="filter-tab" data-cat="tools">Extension Accessories</button>
+    </div>
+    <div class="filter-count" id="productCount">Total 0 products</div>
+  </div>
+</div>
+
+<section class="products-section">
+  <div class="container">
+    <div class="product-grid" id="productGrid">
+      <!-- VIP 7 -->
+      <div class="product-card" data-cat="feather" data-pid="vip7" data-name="VIP 7 Economy Flat Weft" data-tier="VIP 7 · ECONOMY" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-vip7.jpg" alt="VIP 7 Economy Flat Weft"><span class="product-badge">Economy</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 7 · ECONOMY</div>
+          <h3 class="product-name">VIP 7 Economy Flat Weft</h3>
+          <p class="product-desc">100% Human Hair, Color level 7, Slightly tapered ends, Great value entry choice</p>
+          <div class="product-price-range">1,100K – 2,300K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="1100000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="1200000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="1550000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="1700000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="1850000">60cm</button>
+            <button class="size-btn" data-size="65cm" data-price="2300000">65cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- VIP 8-1 -->
+      <div class="product-card" data-cat="feather" data-pid="vip8_1" data-name="VIP 8-1 Standard Flat Weft" data-tier="VIP 8-1 · STANDARD" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-vip8.jpg" alt="VIP 8-1 Standard Flat Weft"><span class="product-badge">Standard</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 8-1 · STANDARD</div>
+          <h3 class="product-name">VIP 8-1 Standard Flat Weft</h3>
+          <p class="product-desc">Standard Hair Quality, Remaining length10cm, Thick ends, Daily wear favorite</p>
+          <div class="product-price-range">1,160K – 2,000K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="1160000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="1350000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="1600000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="1800000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="2000000">60cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- VIP 8-3 -->
+      <div class="product-card" data-cat="feather" data-pid="vip8_3" data-name="VIP 8-3 Premium Flat Weft" data-tier="VIP 8-3 · PREMIUM" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-vip83.jpg" alt="VIP 8-3 Premium Flat Weft"><span class="product-badge green">Premium</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 8-3 · PREMIUM</div>
+          <h3 class="product-name">VIP 8-3 Premium Flat Weft</h3>
+          <p class="product-desc">Remaining length10cm, Thick ends, Smooth & glossy, Dyeable tolevel 8</p>
+          <div class="product-price-range">1,400K – 2,700K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="1400000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="1500000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="1850000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="2000000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="2200000">60cm</button>
+            <button class="size-btn" data-size="65cm" data-price="2700000">65cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- VIP 9 -->
+      <div class="product-card" data-cat="feather" data-pid="vip9" data-name="VIP 9 Premium Flat Weft" data-tier="VIP 9 · HIGH-END" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-vip9.jpg" alt="VIP 9 Premium Flat Weft"><span class="product-badge">Hot Sale</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 9 · HIGH-END</div>
+          <h3 class="product-name">VIP 9 Premium Flat Weft</h3>
+          <p class="product-desc">Remaining length10cm, Thick ends, Smooth & glossy, Dyeable tolevel 8.5, Salon-grade quality</p>
+          <div class="product-price-range">1,800K – 2,700K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="1800000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="1900000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="2180000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="2480000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="2700000">60cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- VIP 9+ -->
+      <div class="product-card" data-cat="feather" data-pid="vip9_plus" data-name="VIP 9+ Luxury Flat Weft" data-tier="VIP 9+ · SUPERIOR" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-colors.jpg" alt="VIP 9+ Luxury Flat Weft"><span class="product-badge green">Luxury</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 9+ · SUPERIOR</div>
+          <h3 class="product-name">VIP 9+ Luxury Flat Weft</h3>
+          <p class="product-desc">Thick ends, 30cmNo short hairs, Luxury Craftsmanship, Top choice for premium clients</p>
+          <div class="product-price-range">2,250K – 3,600K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="2250000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="2500000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="2900000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="3100000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="3600000">60cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- VIP 10 -->
+      <div class="product-card" data-cat="feather" data-pid="vip10" data-name="VIP 10 Vietnamese Hair Extensions" data-tier="VIP 10 · VIETNAMESE" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-vip10.jpg" alt="VIP 10 Vietnamese Hair Extensions"><span class="product-badge">Recommended</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 10 · VIETNAMESE</div>
+          <h3 class="product-name">VIP 10 Vietnamese Hair Extensions</h3>
+          <p class="product-desc">Vietnamese Hair, Bleachable to9, Thick, bouncy strands, Long-lasting</p>
+          <div class="product-price-range">2,140K – 3,800K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="2140000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="2350000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="2950000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="3100000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="3400000">60cm</button>
+            <button class="size-btn" data-size="65cm" data-price="3800000">65cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- VIP 11 -->
+      <div class="product-card" data-cat="feather" data-pid="vip11" data-name="VIP 11 Virgin Hair Extensions" data-tier="VIP 11 · VIRGIN" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-vip11.jpg" alt="VIP 11 Virgin Hair Extensions"><span class="product-badge green">Luxury</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 11 · VIRGIN</div>
+          <h3 class="product-name">VIP 11 Virgin Hair Extensions</h3>
+          <p class="product-desc">Virgin Hair, Luxury Quality, Flawless except for price, Bleachable & dyeable</p>
+          <div class="product-price-range">2,750K – 4,750K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="45cm" data-price="2750000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="3650000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="4300000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="4750000">60cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- Curly -->
+      <div class="product-card" data-cat="feather" data-pid="curly" data-name="VIP 9 Curly Flat Weft" data-tier="VIP 9 · CURLY" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-curly.jpg" alt="VIP 9 Curly Flat Weft"><span class="product-badge">Curly</span></div>
+        <div class="product-info">
+          <div class="product-tier">VIP 9 · CURLY</div>
+          <h3 class="product-name">VIP 9 Curly Flat Weft</h3>
+          <p class="product-desc">100% Human Hair, Natural Wave Texture, Gorgeous curls without styling</p>
+          <div class="product-price-range">1,800K – 2,600K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="1800000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="1900000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="2200000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="2300000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="2600000">60cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- Balayage -->
+      <div class="product-card" data-cat="feather" data-pid="balayage" data-name="Balayage Flat Weft" data-tier="BALAYAGE · FASHION" data-unit="bundles">
+        <div class="product-img"><img src="assets/product-feather.jpg" alt="Balayage Flat Weft"><span class="product-badge green">Fashion</span></div>
+        <div class="product-info">
+          <div class="product-tier">BALAYAGE · FASHION</div>
+          <h3 class="product-name">Balayage Flat Weft</h3>
+          <p class="product-desc">Light Balayage Effect, Natural gradient, Must-have for trendsetters</p>
+          <div class="product-price-range">2,380K – 3,480K <small>/ bundles · Per bundle200pcss</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="45cm" data-price="2380000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="2950000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="3100000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="3480000">60cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- Natural Black Bulk -->
+      <div class="product-card" data-cat="bundle" data-pid="bundle_black" data-name="Raw Bulk（Black）" data-tier="BUNDLE · NATURAL BLACK" data-unit="bundle">
+        <div class="product-img"><img src="assets/product-bundle.jpg" alt="Natural Black Bulk"><span class="product-badge">Natural</span></div>
+        <div class="product-info">
+          <div class="product-tier">BUNDLE · NATURAL BLACK</div>
+          <h3 class="product-name">Raw Bulk（Black）</h3>
+          <p class="product-desc">Raw unprocessed bulk hair, 70g/bundle, Healthy, glossy hair</p>
+          <div class="product-price-range">560K – 1,100K <small>/bundle · 70g</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="40cm" data-price="560000">40cm</button>
+            <button class="size-btn" data-size="45cm" data-price="630000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="700000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="840000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="910000">60cm</button>
+            <button class="size-btn" data-size="65cm" data-price="1100000">65cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- Light Bleached Bulk -->
+      <div class="product-card" data-cat="bundle" data-pid="bundle_blonde" data-name="Raw Bulk（Light Bleached）" data-tier="BUNDLE · BLEACHED" data-unit="bundle">
+        <div class="product-img"><img src="assets/product-blonde.jpg" alt="Light Bleached Bulk"><span class="product-badge green">Bleached</span></div>
+        <div class="product-info">
+          <div class="product-tier">BUNDLE · BLEACHED</div>
+          <h3 class="product-name">Raw Bulk（Light Bleached）</h3>
+          <p class="product-desc">Bleached Bulk Hair, 100g/bundle, Ready to use or re-color</p>
+          <div class="product-price-range">1,320K – 2,070K <small>/bundle · 100g</small></div>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="45cm" data-price="1320000">45cm</button>
+            <button class="size-btn" data-size="50cm" data-price="1520000">50cm</button>
+            <button class="size-btn" data-size="55cm" data-price="1670000">55cm</button>
+            <button class="size-btn" data-size="60cm" data-price="1820000">60cm</button>
+            <button class="size-btn" data-size="65cm" data-price="2070000">65cm</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+      <!-- Accessories -->
+      <div class="product-card" data-cat="tools" data-pid="tools" data-name="Professional Extension Tool Kit" data-tier="TOOLS · ACCESSORIES" data-unit="set">
+        <div class="product-img"><img src="assets/accessories.jpg" alt="Professional Extension Tool Kit"><span class="product-badge">Accessories</span></div>
+        <div class="product-info">
+          <div class="product-tier">TOOLS · ACCESSORIES</div>
+          <h3 class="product-name">Professional Extension Tool Kit</h3>
+          <p class="product-desc">Golden Hook Needle + Weft Roll + Professional Comb, All extension tools in one set</p>
+          <div class="product-price-range">Contact Support <small>/ set</small></div>
+          <p style="font-size:11px;color:var(--gray);margin-bottom:12px;">Hook Needle13K/pcss, Large Weft Roll18K/Curly, Deep Curly15K/Curly</p>
+          <div class="product-sizes">
+            <button class="size-btn active" data-size="set" data-price="0">set</button>
+          </div>
+          <div class="product-bottom"><button class="add-cart-btn" onclick="showToast('Contact us for wholesale pricing')">Contact for Quote</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="full-pricing">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Complete Price List</div>
+      <h2 class="section-title">Complete Wholesale Price List</h2>
+    </div>
+    <div class="price-table-wrap">
+      <table class="price-table">
+        <thead><tr><th style="width:22%">Quality Grade</th><th>40cm</th><th>45cm</th><th>50cm</th><th>55cm</th><th>60cm</th><th>65cm</th></tr></thead>
+        <tbody>
+          <tr><td class="tier-label">VIP 7 Economy<small>100% Human Hair · Color level 7</small></td><td>1,100K</td><td>1,200K</td><td>1,550K</td><td>1,700K</td><td>1,850K</td><td>2,300K</td></tr>
+          <tr><td class="tier-label">VIP 8-1 Economy<small>Standard Hair Quality</small></td><td>1,160K</td><td>1,350K</td><td>1,600K</td><td>1,800K</td><td>2,000K</td><td>—</td></tr>
+          <tr><td class="tier-label">VIP 8-2<small>Remaining length10cm · Thick ends</small></td><td>1,300K</td><td>1,450K</td><td>1,750K</td><td>1,950K</td><td>2,150K</td><td>—</td></tr>
+          <tr><td class="tier-label">VIP 8-3 Premium<small>Remaining length10cm · Dyeablelevel 8</small></td><td>1,400K</td><td>1,500K</td><td>1,850K</td><td>2,000K</td><td>2,200K</td><td>2,700K</td></tr>
+          <tr><td class="tier-label">VIP 8+<small>Top30cmNo short hairs</small></td><td>1,800K</td><td>2,050K</td><td>2,400K</td><td>2,800K</td><td>3,000K</td><td>—</td></tr>
+          <tr><td class="tier-label">VIP 9 Premium<small>Remaining length10cm · Dyeablelevel 8.5</small></td><td>1,800K</td><td>1,900K</td><td>2,180K</td><td>2,480K</td><td>2,700K</td><td>—</td></tr>
+          <tr><td class="tier-label">VIP 9+ Premium<small>30cmNo short hairs · Thick ends</small></td><td>2,250K</td><td>2,500K</td><td>2,900K</td><td>3,100K</td><td>3,600K</td><td>—</td></tr>
+          <tr><td class="tier-label">VIP 10<small>Vietnamese Hair · Bleachable9</small></td><td>2,140K</td><td>2,350K</td><td>2,950K</td><td>3,100K</td><td>3,400K</td><td>3,800K</td></tr>
+          <tr><td class="tier-label">VIP 11 Virgin Hair<small>Luxury Quality · Bleachable & dyeable</small></td><td>—</td><td>2,750K</td><td>3,650K</td><td>4,300K</td><td>4,750K</td><td>—</td></tr>
+          <tr><td class="tier-label">VIP 9 Curly<small>100% Human Hair · Natural Wave</small></td><td>1,800K</td><td>1,900K</td><td>2,200K</td><td>2,300K</td><td>2,600K</td><td>—</td></tr>
+          <tr><td class="tier-label">Balayage Economy<small>Light Bleached · Remaining length10cm</small></td><td>—</td><td>1,850K</td><td>2,400K</td><td>2,600K</td><td>2,850K</td><td>—</td></tr>
+          <tr><td class="tier-label">Balayage Premium<small>Light Bleached · Remaining length10cm</small></td><td>—</td><td>2,380K</td><td>2,950K</td><td>3,100K</td><td>3,480K</td><td>—</td></tr>
+          <tr><td class="tier-label">Raw Bulk（Black）<small>70g/bundle · Unprocessed</small></td><td>560K</td><td>630K</td><td>700K</td><td>840K</td><td>910K</td><td>1,100K</td></tr>
+          <tr><td class="tier-label">Raw Bulk（Light Bleached）<small>100g/bundle · Bleached</small></td><td>—</td><td>1,320K</td><td>1,520K</td><td>1,670K</td><td>1,820K</td><td>2,070K</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="price-note">Prices in：<strong>K VND（K = 1,000 VND）</strong> · Per bundle 200 pcss · Buy 10 + bundles for more discount · Contact us for accessory pricing</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo-text" style="font-size:20px;color:var(--ivory)">Yuefa<small style="color:var(--gold)">YUEFA VIETNAM HAIR</small></div>
+        <p>Yuefa Vietnam Hair Co., Ltd. — 15 years of expertise in premium human hair. Source-factory quality and service for clients worldwide.</p>
+        <div class="footer-contact">
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/></svg> +84 901 234 567</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg> sales@yuefahair.vn</p>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Products</h4><ul><li><a href="products.html?cat=feather">3rd-Gen Flat Weft</a></li><li><a href="products.html?cat=bundle">Hair Bulk</a></li><li><a href="products.html?cat=tools">Extension Accessories</a></li><li><a href="products.html">All Products</a></li></ul></div>
+      <div class="footer-col"><h4>About Us</h4><ul><li><a href="index.html#factory">Our Factory</a></li><li><a href="index.html#tiers">Quality Grade</a></li><li><a href="index.html#wholesale">Wholesale</a></li><li><a href="index.html#faq">FAQ</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Yuefa Vietnam Hair Co., Ltd. YUEFA VIETNAM HAIR CO., LTD.</p>
+      <p>Prices in：K VND（K = 1,000 VND）</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const state = { currentCat: 'all' };
+
+function formatPrice(vnd) {
+  if (vnd === 0) return 'Contact Support';
+  return (vnd / 1000).toLocaleString() + 'K';
+}
+
+function filterProducts(cat) {
+  state.currentCat = cat;
+  const cards = document.querySelectorAll('.product-card');
+  let visible = 0;
+  cards.forEach(card => {
+    if (cat === 'all' || card.dataset.cat === cat) {
+      card.style.display = '';
+      visible++;
+    } else {
+      card.style.display = 'none';
+    }
+  });
+  document.getElementById('productCount').textContent = 'Total ' + visible + ' products';
+}
+
+
+
+
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+// Size Selection（Event Delegation）
+document.getElementById('productGrid').addEventListener('click', function(e) {
+  const btn = e.target.closest('.size-btn');
+  if (btn) {
+    const card = btn.closest('.product-card');
+    card.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+});
+
+// Filter
+document.querySelectorAll('.filter-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    filterProducts(tab.dataset.cat);
+  });
+});
+
+// URLFilter
+const urlParams = new URLSearchParams(window.location.search);
+const catParam = urlParams.get('cat');
+if (catParam && ['feather','bundle','tools'].includes(catParam)) {
+  state.currentCat = catParam;
+  document.querySelectorAll('.filter-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.cat === catParam);
+  });
+}
+
+filterProducts(state.currentCat);
+
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  nav.style.boxShadow = window.scrollY > 10 ? '0 2px 24px rgba(26,58,42,0.1)' : 'none';
+});
+</script>
+</body>
+</html>
