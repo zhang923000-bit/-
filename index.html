@@ -51,7 +51,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== Hero ===== */
 .hero { position: relative; height: 90vh; min-height: 640px; overflow: hidden; display: flex; align-items: center; }
-.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 15%; }
+.hero-bg { position: absolute; top: -10%; left: 0; width: 100%; height: 120%; object-fit: cover; object-position: center 15%; will-change: transform; }
 .hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(105deg, rgba(26,58,42,0.82) 0%, rgba(26,58,42,0.5) 45%, transparent 100%); }
 .hero-content { position: relative; z-index: 2; max-width: 1320px; margin: 0 auto; padding: 0 40px; width: 100%; }
 .hero-tag { display: inline-flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; font-weight: 500; }
@@ -238,7 +238,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== CTA ===== */
 .cta-banner { position: relative; padding: 100px 0; overflow: hidden; display: flex; align-items: center; }
-.cta-banner img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.cta-banner img { position: absolute; top: -10%; left: 0; width: 100%; height: 120%; object-fit: cover; will-change: transform; }
 .cta-banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(10,25,18,0.93) 0%, rgba(15,40,28,0.88) 50%, rgba(10,25,18,0.93) 100%); z-index: 1; }
 .cta-content { position: relative; z-index: 2; max-width: 1320px; margin: 0 auto; padding: 0 40px; text-align: center; color: var(--ivory); width: 100%; }
 .cta-content h2 { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 44px); font-weight: 400; margin-bottom: 16px; }
@@ -295,6 +295,55 @@ a { text-decoration: none; color: inherit; }
   .hero-btns { flex-direction: column; }
   .hero-btns .btn { text-align: center; }
 }
+
+/* ===== Scroll Reveal ===== */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ===== Hero Entrance ===== */
+.hero-tag { opacity: 0; animation: fadeUp 1s ease 0.3s forwards; }
+.hero h1 { opacity: 0; animation: fadeUp 1s ease 0.5s forwards; }
+.hero p { opacity: 0; animation: fadeUp 1s ease 0.7s forwards; }
+.hero-btns { opacity: 0; animation: fadeUp 1s ease 0.9s forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ===== Product Card ===== */
+.prod-card { transition: box-shadow 0.4s, transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+.prod-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(26,58,42,0.15); }
+
+/* ===== Button Shine ===== */
+.btn { position: relative; overflow: hidden; }
+.btn::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent); transition: left 0.6s ease; }
+.btn:hover::after { left: 100%; }
+
+/* ===== Color Image Hover ===== */
+.color-img { transition: transform 0.6s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s; }
+.color-img:hover { transform: scale(1.02); box-shadow: 0 12px 40px rgba(26,58,42,0.15); }
+
+/* ===== Review Cards ===== */
+.review-card { transition: transform 0.4s, box-shadow 0.4s; }
+.review-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(26,58,42,0.1); }
+
+/* ===== CTA Subtle Zoom ===== */
+.cta-banner img { transition: transform 8s ease; }
+.cta-banner:hover img { transform: scale(1.05); }
+
+/* ===== Nav Hide on Scroll ===== */
+.nav { transition: transform 0.4s ease; }
+.nav.hidden { transform: translateY(-100%); }
+
+/* ===== WhatsApp Button Glow ===== */
+.ws-cta-btn { position: relative; }
+.ws-cta-btn::before { content: ''; position: absolute; inset: -3px; border-radius: 6px; background: linear-gradient(135deg, #25D366, #128C7E, #25D366); z-index: -1; opacity: 0.6; filter: blur(8px); animation: glowPulse 3s ease infinite; }
+@keyframes glowPulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
 </style>
 </head>
 <body>
@@ -350,7 +399,7 @@ a { text-decoration: none; color: inherit; }
 <!-- Products -->
 <section class="section collections" id="collections">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <div class="section-tag">Our Collection</div>
       <h2 class="section-title">10 Professional Hair Extension Types</h2>
       <p class="section-subtitle">100% human hair, 100g per bundle. Click for pricing & MOQ. Remy & Virgin grades available. Dark (#1-6) / Light (#7+). All textures: Straight, Curly, Wavy.</p>
@@ -358,7 +407,7 @@ a { text-decoration: none; color: inherit; }
     <div class="prod-grid">
 
       <!-- 1. Genius Weft -->
-      <div class="prod-card">
+      <div class="prod-card reveal">
         <div class="prod-card-img"><img src="assets/product-feather.jpg" alt="Genius Weft Hand-tied"><span class="prod-badge">Best Seller</span></div>
         <div class="prod-card-body">
           <h3 class="prod-name">Genius Weft (Hand-Tied)</h3>
@@ -548,11 +597,11 @@ a { text-decoration: none; color: inherit; }
 <section class="section factory" id="factory">
   <div class="container">
     <div class="factory-grid">
-      <div class="factory-images">
+      <div class="factory-images reveal">
         <img src="assets/factory.jpg" alt="Yuefa Production Floor" class="factory-img-main">
         <img src="assets/factory-exterior.jpg" alt="Yuefa Factory Exterior" class="factory-img-sub">
       </div>
-      <div class="factory-content">
+      <div class="factory-content reveal reveal-delay-1">
         <div class="section-tag">Our Factory</div>
         <h2>Vietnam Source Factory<br>Quality & Capacity Assurance</h2>
         <p>Our factory is located in Vietnam, With 5,000 sqm modern production facility, over 200 experienced craftspeople.From raw material sourcing to sorting, hand-weaving, and quality control — fully in-house, ensuring every bundle meets the highest standards.</p>
@@ -585,7 +634,7 @@ a { text-decoration: none; color: inherit; }
 <!-- Color Chart -->
 <section class="section colors-showcase" id="colors">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <div class="section-tag">Color Palette</div>
       <h2 class="section-title">24 Standard Colors</h2>
       <p class="section-subtitle">From natural dark brown to refined platinum, every shade calibrated by professional colorists. Custom color matching available for your brand.</p>
@@ -618,12 +667,12 @@ a { text-decoration: none; color: inherit; }
 <!-- Advantages -->
 <section class="section advantages">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <div class="section-tag">Why Choose Us</div>
       <h2 class="section-title">Why Choose Yuefa</h2>
     </div>
     <div class="adv-grid">
-      <div class="adv-card">
+      <div class="adv-card reveal">
         <div class="adv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2 4 6v6c0 5 3.5 9 8 10 4.5-1 8-5 8-10V6l-8-4Z"/></svg></div>
         <h3>Source Factory</h3>
         <p>Vietnam-owned Factory, No middleman markup, More competitive wholesale pricing, Quality fully controlled.</p>
@@ -651,7 +700,7 @@ a { text-decoration: none; color: inherit; }
 <!-- Wholesale Process -->
 <section class="section wholesale" id="wholesale">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <div class="section-tag">Wholesale Process</div>
       <h2 class="section-title">Start Your Wholesale Partnership in 5 Steps</h2>
       <p class="section-subtitle">A simple and efficient process from inquiry to delivery. We support you every step of the way.</p>
@@ -676,7 +725,7 @@ a { text-decoration: none; color: inherit; }
 
 <section class="section reviews">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <div class="section-tag">Testimonials</div>
       <h2 class="section-title">Trusted by Clients Worldwide</h2>
       <p class="section-subtitle">Wholesalers and salon brands from around the world have built long-term partnerships with Yuefa.</p>
@@ -713,7 +762,7 @@ a { text-decoration: none; color: inherit; }
 <!-- FAQ -->
 <section class="section faq" id="faq">
   <div class="container">
-    <div class="section-header">
+    <div class="section-header reveal">
       <div class="section-tag">FAQ</div>
       <h2 class="section-title">FAQ</h2>
       <p class="section-subtitle">Frequently asked questions about wholesale, product quality, and custom services.</p>
@@ -824,11 +873,88 @@ document.querySelectorAll('.prod-sizes').forEach(group => {
   });
 });
 
-// Nav scroll shadow
+// Nav scroll shadow + hide on scroll down
 const nav = document.querySelector('.nav');
+let lastScroll = 0;
 window.addEventListener('scroll', () => {
-  nav.style.boxShadow = window.scrollY > 10 ? '0 2px 24px rgba(26,58,42,0.1)' : 'none';
+  const cur = window.scrollY;
+  nav.style.boxShadow = cur > 10 ? '0 2px 24px rgba(26,58,42,0.1)' : 'none';
+  if (cur > 200 && cur > lastScroll) {
+    nav.classList.add('hidden');
+  } else {
+    nav.classList.remove('hidden');
+  }
+  lastScroll = cur;
 });
+
+// Scroll Reveal
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Stat Counter Animation
+const statObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const text = el.textContent.trim();
+      const numMatch = text.match(/^(\d+)/);
+      if (numMatch) {
+        const target = parseInt(numMatch[1]);
+        const suffix = text.slice(numMatch[1].length);
+        let cur = 0;
+        const step = Math.max(1, Math.ceil(target / 40));
+        const timer = setInterval(() => {
+          cur += step;
+          if (cur >= target) { cur = target; clearInterval(timer); }
+          el.textContent = cur + suffix;
+        }, 30);
+      }
+      statObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
+// Parallax on Hero & CTA backgrounds
+const heroBg = document.querySelector('.hero-bg');
+const ctaBg = document.querySelector('.cta-banner img');
+let ticking = false;
+
+function parallax() {
+  const scrollY = window.scrollY;
+  // Hero: moves slower than scroll
+  if (heroBg) {
+    const heroH = document.querySelector('.hero').offsetHeight;
+    if (scrollY < heroH) {
+      heroBg.style.transform = `translateY(${scrollY * 0.4}px)`;
+    }
+  }
+  // CTA: moves at half speed when in view
+  if (ctaBg) {
+    const cta = document.querySelector('.cta-banner');
+    const rect = cta.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      const progress = (rect.top + rect.height / 2 - window.innerHeight / 2);
+      ctaBg.style.transform = `translateY(${progress * 0.15}px)`;
+    }
+  }
+  ticking = false;
+}
+
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => { parallax(); ticking = false; });
+    ticking = true;
+  }
+});
+parallax();
 </script>
 </body>
 </html>
